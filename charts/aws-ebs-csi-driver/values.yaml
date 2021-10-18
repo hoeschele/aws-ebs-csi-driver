@@ -64,6 +64,9 @@ imagePullSecrets: []
 nameOverride:
 fullnameOverride:
 
+# additionalLabels -- Labels to add to each object of the chart.
+additionalLabels: {}
+
 controller:
   # If arbitrary args like "--aws-sdk-debug-log=true" need to be passed, use this value
   additionalArgs: []
@@ -87,8 +90,6 @@ controller:
   nodeSelector: {}
   podAnnotations: {}
   podLabels: {}
-  # additionalLabels -- Labels to add to each object of the chart.
-  additionalLabels: {}
   priorityClassName: system-cluster-critical
   # AWS region to use. If not specified then the region will be looked up via the AWS EC2 metadata
   # service.
